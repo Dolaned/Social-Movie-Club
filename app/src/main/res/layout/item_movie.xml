@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout">
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:id="@+id/ivPoster" />
+        <ProgressBar
+            android:id="@+id/imageProgressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+
+
+    </FrameLayout>
+
+
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mlvRatingBar"
+        android:numStars = "5"
+        android:stepSize="0.5"
+        android:progressTint="@color/red"
+        android:progressBackgroundTint="@color/white"
+        android:secondaryProgressTint="@color/white"
+        android:layout_below="@+id/tvShortPlot"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        android:layout_toRightOf="@+id/bViewParty"
+        android:layout_alignTop="@+id/bViewParty"/>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/movieTitle"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/frameLayout" />
+
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/movieYear"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toEndOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/tvShortPlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/movieShortPlot"
+        android:layout_below="@+id/tvYear"
+        android:layout_toEndOf="@+id/frameLayout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bView"
+        android:id="@+id/bViewParty"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignEnd="@+id/frameLayout" />
+
+
+
+</RelativeLayout>

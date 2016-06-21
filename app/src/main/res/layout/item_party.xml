@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bViewAttendees"
+        android:id="@+id/bViewAttendees"
+        android:layout_alignTop="@+id/bDeleteParty"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvPartyLocation"
+        android:id="@+id/tvpartyLocation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvPartyvenue"
+        android:id="@+id/tvpartyVenue"
+        android:layout_below="@+id/tvpartyLocation"
+        android:layout_alignStart="@+id/tvpartyLocation"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvPartyDate"
+        android:id="@+id/tvpartyDate"
+        android:layout_below="@+id/tvpartyVenue"
+        android:layout_alignStart="@+id/tvpartyVenue"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvAttendees"
+        android:id="@+id/textView8"
+        android:layout_above="@+id/bViewAttendees"
+        android:layout_alignStart="@+id/bViewAttendees"
+        android:paddingLeft="5sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvAttendees"
+        android:id="@+id/tvAttendeesCount"
+        android:layout_alignBaseline="@+id/tvPartyTime"
+        android:layout_alignBottom="@+id/tvPartyTime"
+        android:layout_alignEnd="@+id/bViewAttendees"
+        android:paddingRight="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvPartyTime"
+        android:id="@+id/tvPartyTime"
+        android:paddingLeft="10sp"
+        android:layout_below="@+id/tvpartyDate"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10sp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bDeleteParty"
+        android:id="@+id/bDeleteParty"
+        android:layout_below="@+id/tvPartyTime"
+        android:layout_toEndOf="@+id/bEditParty" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bEditParty"
+        android:id="@+id/bEditParty"
+        android:layout_alignTop="@+id/bDeleteParty"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

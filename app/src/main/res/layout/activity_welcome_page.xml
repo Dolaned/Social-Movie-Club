@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="au.com.dylanaird.android.s3249319assignment2.controller.activities.WelcomePage"
+    android:background="#fff">
+
+    <ImageView
+
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:scaleType="fitXY"
+        android:id="@+id/ivLogo"
+        android:background="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Welcome"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scheduleEvent"
+        android:id="@+id/bSearch"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcomeOption"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/bSearch"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scheduledList"
+        android:id="@+id/bMovieList"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

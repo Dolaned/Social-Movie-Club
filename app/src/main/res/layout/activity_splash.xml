@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/blue"
+    android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+    >
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="@color/white"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="center"
+        android:text="@string/splashMP" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/blue" android:orientation="horizontal">
+
+            <TextView android:id="@+id/dummy_button" android:textColor="@color/white"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                 android:text="@string/splashInfo" android:layout_gravity="center" android:padding="10dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="au.com.dylanaird.android.s3249319ass1.view.PartyView">
+
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:id="@+id/ivPoster" />
+    <ProgressBar
+        android:id="@+id/imageProgressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+
+
+</FrameLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mvYear"
+        android:text="@string/movieYear"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/frameLayout" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:id="@+id/mvLongPlot"
+        android:text="@string/movieShortPlot"
+        android:layout_below="@+id/mvYear"
+        android:layout_toEndOf="@+id/frameLayout" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mvRatingBar"
+        android:numStars = "5"
+        android:progressTint="@color/red"
+        android:progressBackgroundTint="@color/white"
+        android:secondaryProgressTint="@color/white"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bPartyAdd"
+        android:id="@+id/bAddParty"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvParties"
+        android:layout_below="@+id/bAddParty"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Social Movie Club</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_movie_list">Movies</string>
+    <string name="hello_world">Hello World!</string>
+
+
+    <!-- Random Strings -->
+
+    <string name="title_activity_splash">Splash</string>
+    <string name="splashMP">Social Movie Club</string>
+    <string name="splashInfo">An App By Dylan Aird, Student No: S3249319</string>
+
+    <!-- Movie Strings -->
+
+    <string name="movieTitle">Title :</string>
+    <string name="movieYear">Year: </string>
+    <string name="movieFullPlot">Full Plot: </string>
+    <string name="movieShortPlot">Short Plot: </string>
+    <string name="title_activity_movie_view">MovieView</string>
+
+    <string name="movieList">List Of Movies</string>
+    <string name="movieEdit">Edit Movie</string>
+    <string name="movieNew">New Movie</string>
+    <string name="partyEdit">Edit Party</string>
+    <string name="partyNew">New Party</string>
+
+    <!-- Party Strings -->
+    <string name="tvPartyLocation">Party Location</string>
+    <string name="tvPartyvenue">Party Venue</string>
+    <string name="tvPartyDate">Party Date</string>
+    <string name="tvPartyTime">Party Time</string>
+    <string name="tvRating">Personal Rating</string>
+    <string name="tvAttendees">Attendees</string>
+    <string name="bViewAttendees">View Attendees</string>
+    <string name="title_activity_new_party">NewParty</string>
+    <string name="deleteAttendee">Delete</string>
+
+
+    <string name="tvSelectMovie">Select Movie</string>
+    <string name="title_activity_party_view">PartyView</string>
+    <string name="bView">View</string>
+
+    <!-- new party View -->
+    <string name="newPartyLocationHint">Party Location</string>
+    <string name="newPartyVenueHint">Party Venue</string>
+    <string name="newPartyDateHint">Party Date</string>
+    <string name="newPartyTimeHint">Party Time</string>
+    <string name="bNewPartyAddAttendees">Add Attendees</string>
+    <string name="bAddAttendees">Add Attendees</string>
+    <string name="bPartyAdd">Create New Party</string>
+    <string name="title_activity_attendees_view">AttendeesView</string>
+    <string name="bSendSms">Send Invitation</string>
+    <string name="bDeleteParty">Delete</string>
+    <string name="bEditParty">Edit</string>
+    <string name="bSaveParty">Save</string>
+
+    <!-- Toast Strings-->
+    <string name="tNoNumber">Contact Has No Number</string>
+    <string name="tAlreadyInvited">Contact is already invited!</string>
+    <string name="tNoInvites">No one to Invite!</string>
+    <string name="tSendInvites">Invites sent!</string>
+    <string name="tPartyNotDeleted">Party not deleted!</string>
+    <string name="bSave">Save</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="titleOMDBSearch">Search OMDB</string>
+    <string name="searchOMDB">Search OMDB</string>
+    <string name="title_activity_search_omdb">SearchOmdb</string>
+    <string name="bSearch">Search</string>
+    <string name="tNetworkError">A network error has occured</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="searchHint">Search...</string>
+
+    <string name="Welcome">Welcome</string>
+    <string name="welcomeOption">Or View</string>
+    <string name="scheduledList">Scheduled Movie List</string>
+    <string name="scheduleEvent">Schedule Event</string>
+    <string name="title_activity_welcome_page">Hello</string>
+    <string name="onDevice">On Device</string>
+
+    <!-- Account type (for sync-adapter authenticator) -->
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">simpleUser</string>
+    <string name="content_authority">au.com.dylanaird.socialMovieClub</string>
+    <string name="syncNow">Sync</string>
+
+</resources>

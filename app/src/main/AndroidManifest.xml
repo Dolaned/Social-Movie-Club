@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="au.com.dylanaird.android.s3249319assignment2" >
+
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/playstore_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.MovieList"
+            android:label="@string/title_activity_movie_list"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.MovieView"
+            android:label="@string/title_activity_movie_view"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/splashMP"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.PartyManager"
+            android:label="@string/title_activity_new_party"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden">
+        </activity>
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.AttendeesView"
+            android:label="@string/title_activity_attendees_view"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden">
+        </activity>
+        <activity
+            android:name="au.com.dylanaird.android.s3249319assignment2.controller.activities.WelcomePage"
+            android:label="@string/title_activity_welcome"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <receiver android:name=".controller.BroadcastReceivers.FirebaseOnChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".controller.activities.SearchActivity$ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".controller.SyncService.FirebaseBackgroundService"
+            android:exported="false"
+            android:stopWithTask="true">
+        </service>
+
+        <provider
+            android:authorities="@string/content_authority"
+            android:name=".controller.SyncService.StubProvider"
+            android:exported="false"
+            android:syncable="true">
+
+        </provider>
+        <service android:name=".controller.SyncService.AuthenticatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"/>
+        </service>
+        <service android:name=".controller.SyncService.FirebaseSyncService"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data
+                    android:name="android.content.SyncAdapter"
+                    android:resource="@xml/syncadapter"/>
+        </service>
+
+    </application>
+
+</manifest>
